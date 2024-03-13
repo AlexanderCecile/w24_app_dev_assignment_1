@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'part_1.dart';
+import 'package:w24_app_dev_assignment_1/part_1.dart';
+import 'package:w24_app_dev_assignment_1/part_2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +28,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('W24 App Dev 2 - Assignment 1')),
+      appBar: AppBar(title: const Text('W24 App Dev 2 - Assignment 1')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -36,19 +37,25 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => LoginScreen(),
+                    builder: (context) => const LoginScreen(),
                   ),
                 );
               },
-              child: Text('Part 1'),
+              child: const Text('Part 1'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const BookingScreen(),
+                  ),
+                );
+              },
+              child: const Text('Part 2'),
             ),
             ElevatedButton(
               onPressed: () {},
-              child: Text('Part 2'),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text('Part 3'),
+              child: const Text('Part 3'),
             ),
           ],
         ),
