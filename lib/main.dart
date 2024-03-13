@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:w24_app_dev_assignment_1/part_1.dart';
 import 'package:w24_app_dev_assignment_1/part_2.dart';
+import 'package:w24_app_dev_assignment_1/part_3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,7 +55,11 @@ class HomePage extends StatelessWidget {
               child: const Text('Part 2'),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const Travel(),
+                ));
+              },
               child: const Text('Part 3'),
             ),
           ],
